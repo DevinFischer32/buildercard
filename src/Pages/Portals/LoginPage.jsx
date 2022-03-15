@@ -21,6 +21,9 @@ export default function LoginPage() {
           />
         </svg>
       </Link>
+
+      <input type="text" placeholder="Username" />
+      <input type="text" placeholder="Password" />
       <Link to="/signup"> Don't have an Account?</Link>
     </div>
   );

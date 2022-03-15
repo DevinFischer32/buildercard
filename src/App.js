@@ -6,10 +6,10 @@ import SignUpPage from "./Pages/Portals/SignUpPage";
 
 function App() {
   return (
-    <main>
+    <main className="bg-bg-W">
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/regisiter" element={<SignUpPage />} />
         <Route path="/signin" element={<LoginPage />} />
       </Routes>
     </main>
