@@ -1,6 +1,7 @@
+require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
-require('dotenv').config()
+const db = require('./db/db')
 
 const ctrl = require('./Controllers/auth')
 
@@ -13,5 +14,10 @@ app.use(express.json())
 app.post('/register', ctrl.register)
 
 app.listen(PORT, (req, res) => {
+  db.authenticate()
+    .then(() => {
+      console.log('DB Connected')
+    })
+    .catch((err) => console.log(err))
   console.log(`Server running on port: ${PORT}`)
 })

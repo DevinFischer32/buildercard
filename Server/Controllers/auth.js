@@ -1,8 +1,15 @@
+require('dotenv').config()
+const db = require('../db/db')
+const bcrypt = require('bcryptjs')
+const { User } = require('../db/models')
+
 module.exports = {
   register: async (req, res) => {
-    const { first_name, last_name, email, hash } = req.body
+    const { first_name, last_name, username, email, password } = req.body
 
-    console.log({ first_name, last_name, email, hash })
+    const salt = bcrypt.genSaltSync(10)
+    const hash = bcrypt.hashSync(password, salt)
+
     res.status(200).send('Success')
   },
   login: async (req, res) => {
