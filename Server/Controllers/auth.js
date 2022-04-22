@@ -27,12 +27,19 @@ module.exports = {
     const { username, password } = req.body
 
     const salt = bcrypt.genSaltSync(10)
-    const compareHash = bcrypt.hashSync(password, salt)
 
     const user = await User.findOne({ where: { username: username } })
 
-    const compare = (ch, h) => {
-      bcrypt.compare(ch, h, (res, req) => {})
+    if(!user){
+      return res.status(403).send('Invalid credentials')
+    }
+    
+    const authenticated = bcrypt.compareSync(password, user.hash)
+
+    if(!authenticated){
+      return res.status(403).send('Invalid credentials')
+    } else {
+      return res.status(200).send('Success')
     }
   },
 }
