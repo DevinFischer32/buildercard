@@ -40,8 +40,4 @@ const User = db.define('users', {
   },
 })
 
-User.associate = function (models) {
-  User.hasMany(models.loans)
-}
-
 module.exports = User
