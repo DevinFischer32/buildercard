@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import axios from 'axios'
 
 const Login: NextPage = () => {
-  const [username, setUsername] = useState<String>('')
-  const [password, setPassword] = useState<String>('')
+  const [username, setUsername] = useState<string>('')
+  const [password, setPassword] = useState<string>('')
 
   const handleSubmit: Function = (e: FormDataEvent) => {
     e.preventDefault()
@@ -28,8 +28,10 @@ const Login: NextPage = () => {
           type="text"
           placeholder="Username"
           onChange={(e) => setUsername(e.target.value)}
+          value={username}
         />
         <input
+          value={password}
           type="text"
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
