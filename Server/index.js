@@ -12,6 +12,7 @@ app.use(cors())
 app.use(express.json())
 
 app.post('/register', ctrl.register)
+app.post('/login', ctrl.login)
 
 app.listen(PORT, (req, res) => {
   db.authenticate()

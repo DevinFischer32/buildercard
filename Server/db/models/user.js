@@ -40,22 +40,8 @@ const User = db.define('users', {
   },
 })
 
-// User.sync({ alter: true })
-//   .then(() => {
-//     return User.create({
-//       first_name: 'dd',
-//       last_name: 'do',
-//       username: 'u',
-//       email: 'love@me.com',
-//       hash: 'wdwdwwdwdd',
-//     })
-//   })
-//   .then((data) => {
-//     console.log(data.toJSON())
-//     console.log('User added to DB')
-//   })
-//   .catch((err) => {
-//     console.log(err)
-//   })
+User.associate = function (models) {
+  User.hasMany(models.loans)
+}
 
 module.exports = User

@@ -10,32 +10,28 @@ const Register: NextPage = () => {
   const [password, setPassword] = useState<string>('')
   const [formValid, setFormValid] = useState<boolean>(false)
 
-  useEffect(() => {
-    if (firstName?.length && lastName?.length) {
-    }
-  }, [firstName, lastName, email, password])
+  // Need to create validation
+  // sequelize validates email and if password is longer than 8
 
   const handleSubmit: Function = (e: FormDataEvent) => {
     e.preventDefault()
-    if (1 === 1) {
-      try {
-        axios.post('http://localhost:5000/register', {
-          first_name: firstName,
-          last_name: lastName,
-          username,
-          email,
-          password,
-        })
-      } catch (error) {
-        console.error(error)
-      } finally {
-        setFirstName('')
-        setLastName('')
-        setUserName('')
-        setEmail('')
-        setPassword('')
-      }
-    } else return
+    try {
+      axios.post('http://localhost:5000/register', {
+        first_name: firstName,
+        last_name: lastName,
+        username,
+        email,
+        password,
+      })
+    } catch (error) {
+      console.error(error)
+    } finally {
+      setFirstName('')
+      setLastName('')
+      setUserName('')
+      setEmail('')
+      setPassword('')
+    }
   }
 
   return (
