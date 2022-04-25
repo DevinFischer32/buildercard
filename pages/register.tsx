@@ -1,4 +1,5 @@
 import { NextPage } from 'next'
+import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -80,6 +81,9 @@ const Register: NextPage = () => {
         />
         <button onClick={(e) => handleSubmit(e)}>Create Account</button>
       </form>
+      <Link href="/login">
+        <a>Already Have an Account?</a>
+      </Link>
     </div>
   )
 }
