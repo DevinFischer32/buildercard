@@ -20,7 +20,8 @@
     "**/*.ts",
     "**/*.tsx",
     "Server/db/db.js",
-    "Server/Controllers/auth.js"
+    "Server/Controllers/auth.js",
+    "Components/header.jsx"
   ],
   "exclude": ["node_modules"]
 }

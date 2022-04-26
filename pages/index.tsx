@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Link from 'next/link'
 import HowContainer from '../Components/howContainer'
 import WhyContainer from '../Components/whyContainer'
+import Footer from '../Components/footer'
 import Header from '../Components/header'
 import blueprint from '../public/Icons/blueprints.svg'
 import calculator from '../public/Icons/calculator.svg'
@@ -20,7 +21,9 @@ const Home: NextPage = () => {
             Pay us back only after you’ve been paid. Lowest interest rates
             around. Software to make you faster.
           </p>
-          <Link href='/apply'><a>Apply now</a><Link/>
+          <Link href="/apply">
+            <a className="">Apply now</a>
+          </Link>
         </div>
         <div>{/* Builder */}</div>
       </section>
@@ -73,6 +76,7 @@ const Home: NextPage = () => {
           or developer. The GC or developer pays buildercard directly, we subtract the interest fee, and send you your job income same day!"
         />
       </section>
+      <Footer />
     </div>
   )
 }
