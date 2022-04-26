@@ -2,11 +2,14 @@ import { NextPage } from 'next'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import axios from 'axios'
+import { NextRouter, useRouter } from 'next/router'
 
 const Login: NextPage = () => {
   const [username, setUsername] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const [message, setMessage] = useState<string>('')
+
+  const router: NextRouter = useRouter()
 
   const handleSubmit: Function = (e: FormDataEvent) => {
     e.preventDefault()
@@ -18,6 +21,9 @@ const Login: NextPage = () => {
         })
         .then((res) => {
           setMessage(res.data)
+          if (res.status === 200) {
+            // router.push('/')
+          }
         })
     } catch (error) {
       console.log(error)

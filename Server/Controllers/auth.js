@@ -11,7 +11,6 @@ module.exports = {
     const hash = bcrypt.hashSync(password, salt)
 
     const findUser = await User.findOne({ where: { username: username } })
-    console.log(findUser, 'fu')
 
     if (findUser === null) {
       await User.create({ first_name, last_name, username, email, hash })

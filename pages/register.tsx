@@ -1,5 +1,6 @@
 import { NextPage } from 'next'
 import Link from 'next/link'
+import { NextRouter, useRouter } from 'next/router'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -13,6 +14,8 @@ const Register: NextPage = () => {
 
   // Need to create validation
   // sequelize validates email and if password is longer than 8
+
+  const router: NextRouter = useRouter()
 
   const handleSubmit: Function = (e: FormDataEvent) => {
     e.preventDefault()
@@ -32,6 +35,7 @@ const Register: NextPage = () => {
       setUserName('')
       setEmail('')
       setPassword('')
+      // router.push('/login')
     }
   }
 
