@@ -10,7 +10,7 @@ const WhyContainer: NextPage<Props> = (props) => {
   const { header, subHeader } = props
   return (
     <div>
-      <h1>{header}</h1>
+      <h1 className="font-Playfair">{header}</h1>
       <h1>{subHeader}</h1>
     </div>
   )

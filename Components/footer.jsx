@@ -2,9 +2,9 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="bg-builderGreen text-white">
       <section>
-        <h1>buildercard</h1>
+        <h1 className="font-Rampart">buildercard</h1>
         <p>
           We asked ourselves why the largest industry in America is so
           underserved by financial institutions. The answer was simple: normal
@@ -16,7 +16,7 @@ const Footer = () => {
       <section>
         <div>
           <Link href="/company">
-            <a>Company</a>
+            <a className="font-bold">Company</a>
           </Link>
           <Link href="/updates">
             <a>Monthly Updates</a>
@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
         <div>
           <Link href="/support">
-            <a>Support</a>
+            <a className="font-bold">Support</a>
           </Link>
           <Link href="/support/helpcenter">
             <a>Help center</a>

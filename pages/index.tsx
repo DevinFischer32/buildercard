@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import HowContainer from '../Components/howContainer'
 import WhyContainer from '../Components/whyContainer'
 import Footer from '../Components/footer'
@@ -8,43 +9,55 @@ import blueprint from '../public/Icons/blueprints.svg'
 import calculator from '../public/Icons/calculator.svg'
 import compass from '../public/Icons/compass.svg'
 import tape from '../public/Icons/tape.svg'
+import worker from '../public/Icons/worker.svg'
+import bulldozer from '../public/Icons/bulldozer.svg'
 
 const Home: NextPage = () => {
   return (
     <div>
       <Header />
-      <h1>Home Page</h1>
-      <section>
+      <section className="bg-builderBlue ">
         <div>
-          <h1>The credit card for construction firms.</h1>
+          <h1 className="font-Playfair">
+            The credit card for <span className="font-bold">construction</span>{' '}
+            firms.
+          </h1>
           <p>
             Pay us back only after you’ve been paid. Lowest interest rates
             around. Software to make you faster.
           </p>
           <Link href="/apply">
-            <a className="">Apply now</a>
+            <a className="bg-builderGreen text-white">Apply now</a>
           </Link>
         </div>
-        <div>{/* Builder */}</div>
+        <div>
+          <Image src={worker} />
+        </div>
       </section>
 
       <section>
-        <WhyContainer
-          header="Pay us once you get paid"
-          subHeader="Kiss cash flow problems good bye."
-        />
-        <WhyContainer
-          header="2x higher credit limits"
-          subHeader="We partner deep with your firm."
-        />
-        <WhyContainer
-          header="3x lower interest rates"
-          subHeader="Buildercard offers unbeatable rates, between 6.99-19.99% APR."
-        />
-        <WhyContainer
-          header="Finance not just materials, but labor too"
-          subHeader="We’re serious about enabling you to maximize leverage."
-        />
+        <h1 className="font-Playfair">Why buildercard?</h1>
+        <div>
+          <WhyContainer
+            header="Pay us once you get paid"
+            subHeader="Kiss cash flow problems good bye."
+          />
+          <WhyContainer
+            header="2x higher credit limits"
+            subHeader="We partner deep with your firm."
+          />
+          <WhyContainer
+            header="3x lower interest rates"
+            subHeader="Buildercard offers unbeatable rates, between 6.99-19.99% APR."
+          />
+          <WhyContainer
+            header="Finance not just materials, but labor too"
+            subHeader="We’re serious about enabling you to maximize leverage."
+          />
+        </div>
+        <div>
+          <Image src={bulldozer} />
+        </div>
       </section>
 
       <section>

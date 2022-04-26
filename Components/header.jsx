@@ -2,10 +2,10 @@ import Link from 'next/link'
 
 const Header = () => {
   return (
-    <div>
+    <div className="border-b border-black bg-builderBlue">
       <div>
         <Link href="/">
-          <a>buildercard</a>
+          <a className="font-Rampart">buildercard</a>
         </Link>
         <h1>Why buildercard</h1>
         <h1>How it works</h1>
@@ -16,7 +16,7 @@ const Header = () => {
           <a>sign up</a>
         </Link>
         <Link href="/login">
-          <a>sign in</a>
+          <a className="bg-builderGreen text-white">sign in</a>
         </Link>
       </nav>
     </div>

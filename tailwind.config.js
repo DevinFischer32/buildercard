@@ -4,7 +4,18 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        transparent: 'transparent',
+        builderGreen: '#476653',
+        builderBlue: '#BCDAE1',
+      },
+      fontFamily: {
+        Rampart: ['Rampart One', 'cursive'],
+        Playfair: ['Playfair Display', 'serif'],
+        Raleway: ['Raleway', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

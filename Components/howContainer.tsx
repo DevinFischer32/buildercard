@@ -12,7 +12,7 @@ const HowContainer: NextPage<Props> = (props) => {
   const { src, header, description, number } = props
   return (
     <div>
-      <div className="flex">
+      <div className="flex font-Playfair">
         <Icon src={src} />
         <h1>{number}.</h1>
         <h1>{header}</h1>
