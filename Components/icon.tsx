@@ -8,7 +8,11 @@ interface Props {
 
 const Icon: NextPage<Props> = (props) => {
   const { src } = props
-  return <Image src={src} />
+  return (
+    <div>
+      <Image src={src} width={48} height={48} />
+    </div>
+  )
 }
 
 export default Icon

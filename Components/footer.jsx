@@ -2,10 +2,10 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <footer className="bg-builderGreen text-white">
+    <footer className="bg-builderGreen p-2 py-4 text-white">
       <section>
-        <h1 className="font-Rampart">buildercard</h1>
-        <p>
+        <h1 className="font-Rampart text-3xl">buildercard</h1>
+        <p className="py-2">
           We asked ourselves why the largest industry in America is so
           underserved by financial institutions. The answer was simple: normal
           credit cards don’t jive well with the sometimes unpredictable nature
@@ -13,36 +13,36 @@ const Footer = () => {
           customize a product for construction firms. So, we did.
         </p>
       </section>
-      <section>
-        <div>
+      <section className=" grid grid-cols-2 justify-items-center ">
+        <div className="flex w-max flex-col">
           <Link href="/company">
             <a className="font-bold">Company</a>
           </Link>
           <Link href="/updates">
-            <a>Monthly Updates</a>
+            <a className="py-0.5">Monthly Updates</a>
           </Link>
           <Link href="/careers">
-            <a>Careers</a>
+            <a className="py-0.5">Careers</a>
           </Link>
           <Link href="/invest">
-            <a>Invest</a>
+            <a className="py-0.5">Invest</a>
           </Link>
         </div>
-        <div>
+        <div className="flex w-max flex-col ">
           <Link href="/support">
             <a className="font-bold">Support</a>
           </Link>
-          <Link href="/support/helpcenter">
-            <a>Help center</a>
+          <Link href="/helpcenter">
+            <a className="py-0.5">Help center</a>
           </Link>
           <Link href="/email">
-            <a>Email</a>
+            <a className="py-0.5">Email</a>
           </Link>
           <Link href="/phone">
-            <a>Phone</a>
+            <a className="py-0.5">Phone</a>
           </Link>
           <Link href="/pigeon">
-            <a>Carrier pigeon</a>
+            <a className="py-0.5">Carrier pigeon</a>
           </Link>
         </div>
       </section>

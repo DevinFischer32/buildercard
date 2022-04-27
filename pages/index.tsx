@@ -60,34 +60,37 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section>
-        <HowContainer
-          number={1}
-          src={calculator}
-          header="Create new job"
-          description="Buildercard finances individual projects. Create a new job on the online buildercard portal, and submit any document that shows how much you’ll get paid for that job."
-        />
-        <HowContainer
-          number={2}
-          src={tape}
-          header="We extend credit"
-          description="Normally 70-90% of expected job revenue. For example, 
+      <section className="p-2 py-4">
+        <h1 className="mb-5 font-Playfair text-3xl">How buildercard works:</h1>
+        <div className="grid grid-cols-1 justify-items-center gap-4">
+          <HowContainer
+            number={1}
+            src={calculator}
+            header="Create new job"
+            description="Buildercard finances individual projects. Create a new job on the online buildercard portal, and submit any document that shows how much you’ll get paid for that job."
+          />
+          <HowContainer
+            number={2}
+            src={tape}
+            header="We extend credit"
+            description="Normally 70-90% of expected job revenue. For example, 
           if you’ve won a $100K job, buildercard might extend an
           $80K credit limit to be used for this specific project."
-        />
-        <HowContainer
-          number={3}
-          src={blueprint}
-          header="Spend"
-          description="Buy whatever materials and tools you need to get the job done. As you incur payroll costs throughout the project, we’ll pay that too."
-        />
-        <HowContainer
-          number={4}
-          src={compass}
-          header="Get paid, pay us"
-          description="You use buildercard to invoice the general contractor 
+          />
+          <HowContainer
+            number={3}
+            src={blueprint}
+            header="Spend"
+            description="Buy whatever materials and tools you need to get the job done. As you incur payroll costs throughout the project, we’ll pay that too."
+          />
+          <HowContainer
+            number={4}
+            src={compass}
+            header="Get paid, pay us"
+            description="You use buildercard to invoice the general contractor 
           or developer. The GC or developer pays buildercard directly, we subtract the interest fee, and send you your job income same day!"
-        />
+          />
+        </div>
       </section>
       <Footer />
     </div>
