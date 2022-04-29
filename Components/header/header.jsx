@@ -21,7 +21,7 @@ const Header = () => {
           />
         </div>
       ) : (
-        <div className="fixed  right-0 top-0 z-10 grid h-screen w-screen grid-cols-[3fr_5fr] ">
+        <div className="fixed  right-0 top-0 z-10 grid h-screen w-screen grid-cols-[2fr_3fr]">
           <div className=" bg-black opacity-50"></div>
 
           <div className=" relative flex flex-col rounded-l-lg bg-white p-2">

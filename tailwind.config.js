@@ -9,6 +9,9 @@ module.exports = {
         transparent: 'transparent',
         builderGreen: '#476653',
         builderBlue: '#BCDAE1',
+        builderBlueD: '#8EC1CC',
+
+        builderBlueL: '#D5E8EC',
       },
       fontFamily: {
         Rampart: ['Rampart One', 'cursive'],

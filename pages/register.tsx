@@ -3,6 +3,13 @@ import Link from 'next/link'
 import { NextRouter, useRouter } from 'next/router'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import {
+  UserIcon,
+  AtSymbolIcon,
+  LockClosedIcon,
+} from '@heroicons/react/outline'
+import Image from 'next/image'
+import modelFooter from '../public/Icons/modelFooter.svg'
 
 const Register: NextPage = () => {
   const [firstName, setFirstName] = useState<string>('')
@@ -40,54 +47,83 @@ const Register: NextPage = () => {
   }
 
   return (
-    <div>
-      <h1>Create Account</h1>
-      <form>
+    <div className="flex  h-screen w-screen flex-col items-center justify-between p-5">
+      <h1 className="text-2xl">Create Account</h1>
+      <form className="flex w-screen flex-col items-center">
         <input
+          className="my-3 w-2/3 bg-builderBlue p-1 pl-10 placeholder:mr-5  placeholder:text-right placeholder:text-black focus:outline-builderBlueD"
           type="text"
           placeholder="First Name"
           value={firstName}
+          autoComplete="off"
           onChange={(e) => {
             setFirstName(e.target.value)
           }}
         />
         <input
+          className="my-3 w-2/3 bg-builderBlue p-1 pl-10 placeholder:mr-5 placeholder:text-right placeholder:text-black focus:outline-builderBlueD"
           type="text"
           placeholder="Last Name"
           value={lastName}
+          autoComplete="off"
           onChange={(e) => {
             setLastName(e.target.value)
           }}
         />
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => {
-            setUserName(e.target.value)
-          }}
-        />
-        <input
-          type="text"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value)
-          }}
-        />
-        <input
-          type="text"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => {
-            setPassword(e.target.value)
-          }}
-        />
-        <button onClick={(e) => handleSubmit(e)}>Create Account</button>
+        <div className="relative w-2/3">
+          <input
+            className="my-3 w-full bg-builderBlue p-1 pl-10 placeholder:mr-5 placeholder:text-right placeholder:text-black focus:outline-builderBlueD"
+            type="text"
+            placeholder="Username"
+            value={username}
+            autoComplete="off"
+            onChange={(e) => {
+              setUserName(e.target.value)
+            }}
+          />
+          <UserIcon className="absolute top-4 left-3 h-5 w-5" />
+        </div>
+        <div className="relative w-2/3">
+          <input
+            className="my-3 w-full bg-builderBlue p-1 pl-10 placeholder:mr-5 placeholder:text-right placeholder:text-black focus:outline-builderBlueD"
+            type="text"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value)
+            }}
+          />
+          <AtSymbolIcon className="absolute top-4 left-3 h-5 w-5" />
+        </div>
+        <div className=" relative w-2/3">
+          <input
+            className="  my-3 w-full bg-builderBlue p-1 pl-10 placeholder:mr-5 placeholder:text-right placeholder:text-black  focus:outline-builderBlueD"
+            type="text"
+            placeholder="Password"
+            value={password}
+            autoComplete="off"
+            onChange={(e) => {
+              setPassword(e.target.value)
+            }}
+          />
+          <LockClosedIcon className="absolute top-4 left-3 h-5 w-5" />
+        </div>
+        <button
+          className="my-5 rounded-xl border-2 border-builderBlue bg-builderBlueL p-1 px-3"
+          onClick={(e) => handleSubmit(e)}
+        >
+          Create Account
+        </button>
       </form>
       <Link href="/login">
-        <a>Already Have an Account?</a>
+        <a className=" underline decoration-builderBlue underline-offset-2">
+          Already Have an Account?
+        </a>
       </Link>
+
+      {/* <div>
+        <Image src={modelFooter} />
+      </div> */}
     </div>
   )
 }
