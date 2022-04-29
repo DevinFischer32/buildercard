@@ -24,7 +24,7 @@ const Header = () => {
         <div className="fixed  right-0 top-0 z-10 grid h-screen w-screen grid-cols-[2fr_3fr]">
           <div className=" bg-black opacity-50"></div>
 
-          <div className=" relative flex flex-col rounded-l-lg bg-white p-2">
+          <div className=" relative flex flex-col bg-white p-2">
             <div className="mt-10 flex justify-center">
               <h1 className="mr-3 h-16 text-2xl underline underline-offset-2">
                 Hello, User <span className="text-builderGreen">!</span>

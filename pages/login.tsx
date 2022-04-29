@@ -38,7 +38,7 @@ const Login: NextPage = () => {
     <div className="flex  h-screen w-screen flex-col items-center justify-between p-5">
       <div className="mt-10 text-center text-2xl">
         <h1>Sign in to</h1>
-        <h1 className="font-Rampart">buildercard</h1>
+        <h1 className="font-Rampart ">buildercard</h1>
       </div>
       <form className="flex w-screen flex-col items-center">
         <div className=" relative w-2/3">
