@@ -2,10 +2,10 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <footer className="bg-builderGreen p-2 py-4 text-white">
+    <footer className="bg-builderGreen p-3 py-4 text-white">
       <section>
         <h1 className="font-Rampart text-3xl">buildercard</h1>
-        <p className="py-2">
+        <p className="my-2">
           We asked ourselves why the largest industry in America is so
           underserved by financial institutions. The answer was simple: normal
           credit cards don’t jive well with the sometimes unpredictable nature

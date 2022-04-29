@@ -1,4 +1,4 @@
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { MenuIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -21,31 +21,44 @@ const Header = () => {
           />
         </div>
       ) : (
-        <div className="absolute right-1 top-1 grid w-max grid-cols-1 bg-red-100 p-2">
-          <div className="relative mb-5">
-            <XIcon
-              className="absolute right-0 w-5"
+        <div className="fixed  right-0 top-0 z-10 grid h-screen w-screen grid-cols-[3fr_5fr] ">
+          <div className=" bg-black opacity-50"></div>
+
+          <div className=" relative flex flex-col rounded-l-lg bg-white p-2">
+            <div className="mt-10 flex justify-center">
+              <h1 className="mr-3 h-16 text-2xl underline underline-offset-2">
+                Hello, User <span className="text-builderGreen">!</span>
+              </h1>
+            </div>
+
+            <nav>
+              <h1 className="my-2">About us</h1>
+              <h1>Support</h1>
+              <h1 className="my-2">FAQ</h1>
+              <h1 className="mb-2">logout</h1>
+            </nav>
+
+            <div className="mt-10 flex flex-col">
+              <Link href="/register">
+                <a className="mb-4 h-max rounded border border-builderGreen p-1 px-3 text-center">
+                  sign up
+                </a>
+              </Link>
+              <Link href="/login">
+                <a className="h-max rounded bg-builderGreen p-1 px-3 text-center text-white">
+                  sign in
+                </a>
+              </Link>
+            </div>
+            <button
+              className="absolute right-2 left-2 bottom-5 mt-4 rounded bg-builderBlue p-1 px-3 font-bold"
               onClick={() => {
                 setNavbarOpen(!navbarOpen)
               }}
-            />
+            >
+              Close
+            </button>
           </div>
-          <h1 className="underline underline-offset-2">
-            Hello, User <span className="text-builderGreen">!</span>
-          </h1>
-          <h1 className="my-2">About</h1>
-          {/* <h1 className="mb-2">logout</h1> */}
-
-          <Link href="/register">
-            <a className="mb-2 rounded border border-builderGreen p-1 px-3 text-center">
-              sign up
-            </a>
-          </Link>
-          <Link href="/login">
-            <a className="rounded bg-builderGreen  p-1 px-3 text-center text-white">
-              sign in
-            </a>
-          </Link>
         </div>
       )}
     </div>

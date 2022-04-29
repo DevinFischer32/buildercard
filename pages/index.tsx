@@ -12,7 +12,6 @@ import tape from '../public/Icons/tape.svg'
 import worker from '../public/Icons/worker.svg'
 import bulldozer from '../public/Icons/bulldozer.svg'
 
-import bull from '../public/Icons/test/bull.svg'
 const Home: NextPage = () => {
   return (
     <div>
@@ -38,7 +37,7 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section className="mt-10  p-3 py-4">
+      <section className="mt-10 p-3 py-4">
         <h1 className="mb-5 font-Playfair text-3xl">Why buildercard?</h1>
         <div className="z-10">
           <WhyContainer
@@ -58,8 +57,8 @@ const Home: NextPage = () => {
             subHeader="We’re serious about enabling you to maximize leverage."
           />
         </div>
-        <div className="mt-10 animate-drive">
-          <Image src={bull} className="" />
+        <div className=" mt-10 ">
+          <Image src={bulldozer} className="" />
         </div>
       </section>
 
