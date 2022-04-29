@@ -4,7 +4,7 @@ import Image from 'next/image'
 import HowContainer from '../Components/howContainer'
 import WhyContainer from '../Components/whyContainer'
 import Footer from '../Components/footer'
-import Header from '../Components/header'
+import Header from '../Components/header/header'
 import blueprint from '../public/Icons/blueprints.svg'
 import calculator from '../public/Icons/calculator.svg'
 import compass from '../public/Icons/compass.svg'
@@ -12,22 +12,25 @@ import tape from '../public/Icons/tape.svg'
 import worker from '../public/Icons/worker.svg'
 import bulldozer from '../public/Icons/bulldozer.svg'
 
+import bull from '../public/Icons/test/bull.svg'
 const Home: NextPage = () => {
   return (
     <div>
       <Header />
-      <section className="bg-builderBlue ">
+      <section className="bg-builderBlue  p-3 pb-4 pt-10">
         <div>
-          <h1 className="font-Playfair">
+          <h1 className="font-Playfair text-3xl">
             The credit card for <span className="font-bold">construction</span>{' '}
             firms.
           </h1>
-          <p>
+          <p className="my-5 w-2/3">
             Pay us back only after you’ve been paid. Lowest interest rates
             around. Software to make you faster.
           </p>
           <Link href="/apply">
-            <a className="bg-builderGreen text-white">Apply now</a>
+            <a className="rounded bg-builderGreen p-2 px-4 text-sm text-white">
+              Apply now
+            </a>
           </Link>
         </div>
         <div>
@@ -35,9 +38,9 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section>
-        <h1 className="font-Playfair">Why buildercard?</h1>
-        <div>
+      <section className="mt-10  p-3 py-4">
+        <h1 className="mb-5 font-Playfair text-3xl">Why buildercard?</h1>
+        <div className="z-10">
           <WhyContainer
             header="Pay us once you get paid"
             subHeader="Kiss cash flow problems good bye."
@@ -55,12 +58,12 @@ const Home: NextPage = () => {
             subHeader="We’re serious about enabling you to maximize leverage."
           />
         </div>
-        <div>
-          <Image src={bulldozer} />
+        <div className="mt-10 animate-drive">
+          <Image src={bull} className="" />
         </div>
       </section>
 
-      <section className="p-2 py-4">
+      <section className="p-3 py-4">
         <h1 className="mb-5 font-Playfair text-3xl">How buildercard works:</h1>
         <div className="grid grid-cols-1 justify-items-center gap-4">
           <HowContainer

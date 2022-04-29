@@ -21,8 +21,9 @@
     "**/*.tsx",
     "Server/db/db.js",
     "Server/Controllers/auth.js",
-    "Components/header.jsx",
-    "pages/_document.js"
+    "Components/header/header.jsx",
+    "pages/_document.js",
+    "Components/header/headerLogic.js"
   ],
   "exclude": ["node_modules"]
 }

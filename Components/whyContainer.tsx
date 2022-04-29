@@ -9,8 +9,8 @@ interface Props {
 const WhyContainer: NextPage<Props> = (props) => {
   const { header, subHeader } = props
   return (
-    <div>
-      <h1 className="font-Playfair">{header}</h1>
+    <div className="w-11/12">
+      <h1 className="mb-2 font-Playfair text-2xl">{header}</h1>
       <h1>{subHeader}</h1>
     </div>
   )
