@@ -4,7 +4,6 @@ import { useState } from 'react'
 
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
-  console.log(navbarOpen)
 
   return (
     <div className="relative border-b border-black bg-builderBlue p-2">
