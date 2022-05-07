@@ -2,10 +2,20 @@ require('dotenv').config()
 const db = require('../db/db')
 const bcrypt = require('bcryptjs')
 const User = require('../db/models/user')
+const jwt = require('jsonwebtoken')
 
 module.exports = {
   register: async (req, res) => {
     const { first_name, last_name, username, email, password } = req.body
+
+    const userObj = {
+      first_name,
+      last_name,
+      username,
+      email,
+    }
+
+    const accessToken = jwt.sign(userObj, process.env.SESSION_TOKEN_SECRET)
 
     const salt = bcrypt.genSaltSync(10)
     const hash = bcrypt.hashSync(password, salt)
