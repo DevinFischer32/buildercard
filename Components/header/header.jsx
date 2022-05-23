@@ -5,6 +5,9 @@ import { useState } from 'react'
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
+  // let width = window.innerWidth
+
+  // if (width < 768)
   return (
     <div className="relative border-b border-black bg-builderBlue p-2">
       <Link href="/">

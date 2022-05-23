@@ -16,8 +16,8 @@ const Home: NextPage = () => {
   return (
     <div>
       <Header />
-      <section className="bg-builderBlue  p-3 pb-4 pt-10">
-        <div>
+      <section className="bg-builderBlue  p-3 pb-4 pt-10 md:grid md:grid-cols-2">
+        <div className="md:m-auto md:h-1/2 md:pl-8">
           <h1 className="font-Playfair text-3xl">
             The credit card for <span className="font-bold">construction</span>{' '}
             firms.
@@ -37,34 +37,36 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section className="mt-10 p-3 py-4">
+      <section className="mt-10 p-3 py-4 md:px-8">
         <h1 className="mb-5 font-Playfair text-3xl">Why buildercard?</h1>
-        <div className="z-10">
-          <WhyContainer
-            header="Pay us once you get paid"
-            subHeader="Kiss cash flow problems good bye."
-          />
-          <WhyContainer
-            header="2x higher credit limits"
-            subHeader="We partner deep with your firm."
-          />
-          <WhyContainer
-            header="3x lower interest rates"
-            subHeader="Buildercard offers unbeatable rates, between 6.99-19.99% APR."
-          />
-          <WhyContainer
-            header="Finance not just materials, but labor too"
-            subHeader="We’re serious about enabling you to maximize leverage."
-          />
-        </div>
-        <div className=" mt-10 ">
-          <Image src={bulldozer} className="" />
+        <div className="md:grid md:grid-cols-2">
+          <div className="z-10 md:pl-2">
+            <WhyContainer
+              header="Pay us once you get paid"
+              subHeader="Kiss cash flow problems good bye."
+            />
+            <WhyContainer
+              header="2x higher credit limits"
+              subHeader="We partner deep with your firm."
+            />
+            <WhyContainer
+              header="3x lower interest rates"
+              subHeader="Buildercard offers unbeatable rates, between 6.99-19.99% APR."
+            />
+            <WhyContainer
+              header="Finance not just materials, but labor too"
+              subHeader="We’re serious about enabling you to maximize leverage."
+            />
+          </div>
+          <div className=" mt-10 md:mt-2  ">
+            <Image src={bulldozer} className="" />
+          </div>
         </div>
       </section>
 
-      <section className="p-3 py-4">
+      <section className="p-3 py-4 md:p-8">
         <h1 className="mb-5 font-Playfair text-3xl">How buildercard works:</h1>
-        <div className="grid grid-cols-1 justify-items-center gap-4">
+        <div className="grid grid-cols-1 justify-items-center gap-4 md:justify-items-start md:pl-2">
           <HowContainer
             number={1}
             src={calculator}
