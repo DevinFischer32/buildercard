@@ -24,6 +24,7 @@ const Login: NextPage = () => {
           setMessage(res.data)
           if (res.status === 200) {
             // router.push('/')
+            console.log(res)
           }
         })
     } catch (error) {

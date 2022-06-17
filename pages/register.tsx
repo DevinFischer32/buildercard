@@ -42,7 +42,9 @@ const Register: NextPage = () => {
       setUserName('')
       setEmail('')
       setPassword('')
-      // router.push('/login')
+      setTimeout(() => {
+        router.push('/login')
+      }, 1500)
     }
   }
 
@@ -50,28 +52,38 @@ const Register: NextPage = () => {
     <div className="flex  h-screen w-screen flex-col items-center justify-between p-5">
       <h1 className="text-2xl">Create Account</h1>
       <form className="flex w-screen flex-col items-center">
-        <input
-          className="my-3 w-2/3 bg-builderBlue p-1 pl-10 placeholder:mr-5  placeholder:text-right placeholder:text-black focus:outline-builderBlueD"
-          type="text"
-          placeholder="First Name"
-          value={firstName}
-          autoComplete="off"
-          onChange={(e) => {
-            setFirstName(e.target.value)
-          }}
-        />
-        <input
-          className="my-3 w-2/3 bg-builderBlue p-1 pl-10 placeholder:mr-5 placeholder:text-right placeholder:text-black focus:outline-builderBlueD"
-          type="text"
-          placeholder="Last Name"
-          value={lastName}
-          autoComplete="off"
-          onChange={(e) => {
-            setLastName(e.target.value)
-          }}
-        />
-        <div className="relative w-2/3">
+        <div>
+          <label htmlFor="firstName">First Name</label>
           <input
+            id="firstName"
+            className="my-3 w-2/3 bg-builderBlue p-1 pl-10 placeholder:mr-5  placeholder:text-right placeholder:text-black focus:outline-builderBlueD"
+            type="text"
+            placeholder="First Name"
+            value={firstName}
+            autoComplete="off"
+            onChange={(e) => {
+              setFirstName(e.target.value)
+            }}
+          />
+        </div>
+        <div>
+          <label htmlFor="lastName">Last Name</label>
+          <input
+            id="lastName"
+            className="my-3 w-2/3 bg-builderBlue p-1 pl-10 placeholder:mr-5 placeholder:text-right placeholder:text-black focus:outline-builderBlueD"
+            type="text"
+            placeholder="Last Name"
+            value={lastName}
+            autoComplete="off"
+            onChange={(e) => {
+              setLastName(e.target.value)
+            }}
+          />
+        </div>
+        <div className="relative w-2/3">
+          <label htmlFor="username">Username</label>
+          <input
+            id="username"
             className="my-3 w-full bg-builderBlue p-1 pl-10 placeholder:mr-5 placeholder:text-right placeholder:text-black focus:outline-builderBlueD"
             type="text"
             placeholder="Username"
@@ -84,7 +96,9 @@ const Register: NextPage = () => {
           <UserIcon className="absolute top-4 left-3 h-5 w-5" />
         </div>
         <div className="relative w-2/3">
+          <label htmlFor="email">Email</label>
           <input
+            id="email"
             className="my-3 w-full bg-builderBlue p-1 pl-10 placeholder:mr-5 placeholder:text-right placeholder:text-black focus:outline-builderBlueD"
             type="text"
             placeholder="Email"
@@ -96,7 +110,10 @@ const Register: NextPage = () => {
           <AtSymbolIcon className="absolute top-4 left-3 h-5 w-5" />
         </div>
         <div className=" relative w-2/3">
+          <label htmlFor="password">Password</label>
+
           <input
+            id="password"
             className="  my-3 w-full bg-builderBlue p-1 pl-10 placeholder:mr-5 placeholder:text-right placeholder:text-black  focus:outline-builderBlueD"
             type="text"
             placeholder="Password"
@@ -109,10 +126,10 @@ const Register: NextPage = () => {
           <LockClosedIcon className="absolute top-4 left-3 h-5 w-5" />
         </div>
         <button
-          className="my-5 rounded-xl border-2 border-builderBlue bg-builderBlueL p-1 px-3"
+          className="my-5 w-1/2 rounded-xl border-2 border-builderBlue bg-builderBlueL p-1 px-3"
           onClick={(e) => handleSubmit(e)}
         >
-          Create Account
+          Sign up
         </button>
       </form>
       <Link href="/login">
