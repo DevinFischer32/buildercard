@@ -12,28 +12,28 @@ const Login: NextPage = () => {
 
   const router: NextRouter = useRouter()
 
-  const handleSubmit: Function = (e: FormDataEvent) => {
-    e.preventDefault()
-    try {
-      axios
-        .post('http://localhost:5000/login', {
-          username,
-          password,
-        })
-        .then((res) => {
-          setMessage(res.data)
-          if (res.status === 200) {
-            // router.push('/')
-            console.log(res)
-          }
-        })
-    } catch (error) {
-      console.log(error)
-    } finally {
-      setUsername('')
-      setPassword('')
-    }
-  }
+  // const handleSubmit: Function = (e: FormDataEvent) => {
+  //   e.preventDefault()
+  //   try {
+  //     axios
+  //       .post('http://localhost:5000/login', {
+  //         username,
+  //         password,
+  //       })
+  //       .then((res) => {
+  //         setMessage(res.data)
+  //         if (res.status === 200) {
+  //           // router.push('/')
+  //           console.log(res)
+  //         }
+  //       })
+  //   } catch (error) {
+  //     console.log(error)
+  //   } finally {
+  //     setUsername('')
+  //     setPassword('')
+  //   }
+  // }
 
   return (
     <div className="flex  h-screen w-screen flex-col items-center justify-between p-5">
@@ -64,7 +64,7 @@ const Login: NextPage = () => {
         </div>
         <button
           className="my-5 rounded-xl border-2 border-builderBlue bg-builderBlueL p-1 px-5"
-          onClick={(e) => handleSubmit(e)}
+          // onClick={(e) => handleSubmit(e)}
         >
           Login
         </button>

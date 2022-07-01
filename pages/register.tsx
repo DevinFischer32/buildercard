@@ -24,29 +24,29 @@ const Register: NextPage = () => {
 
   const router: NextRouter = useRouter()
 
-  const handleSubmit: Function = (e: FormDataEvent) => {
-    e.preventDefault()
-    try {
-      axios.post('http://localhost:5000/register', {
-        first_name: firstName,
-        last_name: lastName,
-        username,
-        email,
-        password,
-      })
-    } catch (error) {
-      console.error(error)
-    } finally {
-      setFirstName('')
-      setLastName('')
-      setUserName('')
-      setEmail('')
-      setPassword('')
-      setTimeout(() => {
-        router.push('/login')
-      }, 1500)
-    }
-  }
+  // const handleSubmit: Function = (e: FormDataEvent) => {
+  //   e.preventDefault()
+  //   try {
+  //     axios.post('http://localhost:5000/register', {
+  //       first_name: firstName,
+  //       last_name: lastName,
+  //       username,
+  //       email,
+  //       password,
+  //     })
+  //   } catch (error) {
+  //     console.error(error)
+  //   } finally {
+  //     setFirstName('')
+  //     setLastName('')
+  //     setUserName('')
+  //     setEmail('')
+  //     setPassword('')
+  //     setTimeout(() => {
+  //       router.push('/login')
+  //     }, 1500)
+  //   }
+  // }
 
   return (
     <div className="flex  h-screen w-screen flex-col items-center justify-between p-5">
@@ -127,7 +127,7 @@ const Register: NextPage = () => {
         </div>
         <button
           className="my-5 w-1/2 rounded-xl border-2 border-builderBlue bg-builderBlueL p-1 px-3"
-          onClick={(e) => handleSubmit(e)}
+          // onClick={(e) => handleSubmit(e)}
         >
           Sign up
         </button>
